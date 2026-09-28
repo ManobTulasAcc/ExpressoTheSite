@@ -64,8 +64,8 @@ background:linear-gradient(180deg,rgba(255,90,31,.55),rgba(255,90,31,0) 70%);cli
 section.pad{padding:clamp(72px,10vw,140px) 0;border-top:1px solid var(--line)}
 .split{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,96px);align-items:end}
 .split p{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--text);opacity:.85}
-.words{margin-top:clamp(48px,7vw,96px);display:grid;grid-template-columns:repeat(4,1fr);gap:8px 16px;border-top:1px solid var(--line);padding-top:clamp(24px,4vw,48px)}
-.words span{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(1.3rem,4.2vw,3.4rem);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1px var(--muted);opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s,color .7s,-webkit-text-stroke-color .7s}
+.words{margin-top:clamp(48px,7vw,96px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.4vw,16px) clamp(14px,2.2vw,24px);border-top:1px solid var(--line);padding-top:clamp(24px,4vw,48px)}
+.words span{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(1.3rem,4.2vw,3.4rem);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1px var(--muted);opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s,color .7s,-webkit-text-stroke-color .7s;min-width:0;max-width:100%;display:block;overflow-wrap:anywhere}
 .words.in span{opacity:1;transform:none;color:var(--text);-webkit-text-stroke-color:transparent}
 .words.in span:nth-child(1){transition-delay:.1s}.words.in span:nth-child(2){transition-delay:.5s}.words.in span:nth-child(3){transition-delay:.9s}
 .words.in span:nth-child(4){transition-delay:1.3s;color:var(--accent)}
@@ -112,12 +112,13 @@ footer b{font-family:var(--display);letter-spacing:.06em}footer span{font-size:.
  .burger{display:block}
  .split{grid-template-columns:1fr;align-items:start}
  .benefits{grid-template-columns:1fr 1fr}
+ .words{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:640px){
  .grid{grid-template-columns:1fr}
  .benefits{grid-template-columns:1fr}
- .words{grid-template-columns:1fr 1fr}
- .words span{font-size:clamp(2rem,10vw,3rem)}
+ .words{grid-template-columns:1fr}
+ .words span{font-size:clamp(1.8rem,10vw,3rem)}
  .item{min-height:0}
  .btn{width:100%;text-align:center}
  .hero{padding-bottom:88px}
